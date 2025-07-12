@@ -489,69 +489,11 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../images/logo.png" alt="MasterBikes" height="30" class="d-inline-block align-text-top me-2">
-                MasterBikes
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="arriendo.html">Arriendos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="catalogo.html">Catálogo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="personalizacion.html">Personalización</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="formulario.html">Contacto</a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav align-items-center">
-                    <!-- Cart button -->
-                    <li class="nav-item me-2">
-                        <button class="btn btn-outline-light position-relative" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-                            <i class="bi bi-cart"></i> Carrito
-                            <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display: none;">0</span>
-                        </button>
-                    </li>
-                    <!-- Login/Register buttons -->
-                    <li class="nav-item">
-                        <button class="btn btn-outline-light me-2" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            <i class="bi bi-person"></i> Iniciar Sesión
-                        </button>
-                    </li>
-                    <li class="nav-item">
-                        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
-                            <i class="bi bi-person-plus"></i> Registrarse
-                        </button>
-                    </li>
-                    <!-- User menu (hidden by default) -->
-                    <li class="nav-item dropdown" id="userMenu" style="display: none;">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle"></i> <span class="user-name">Usuario</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-person"></i> Perfil</a></li>
-                            <li><a class="dropdown-item" href="arriendo.html"><i class="bi bi-bicycle"></i> Mis Arriendos</a></li>
-                            <li><a class="dropdown-item" href="#"><i class="bi bi-gear"></i> Configuración</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right"></i> Cerrar Sesión</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <object
+            type="text/html"
+            data="../components/topbar.html"
+            style="width:100%; height:100px; border:none; overflow:hidden;">
+    </object>
 
     <!-- Login Modal -->
     <div class="modal fade" id="loginModal" tabindex="-1">
@@ -912,65 +854,19 @@
         });
     </script>
 
-    <!-- Footer estilo Oxford Store -->
-    <footer class="bg-white border-top mt-5 pt-4 pb-3">
-      <div class="container">
-        <div class="row text-center text-md-start">
-          <div class="col-12 col-md-3 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">SOBRE MASTERBIKES</h6>
-            <ul class="list-unstyled small">
-              <li><a href="#" class="text-dark text-decoration-none">Tiendas y puntos de retiro</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Precios taller</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Servicios técnicos autorizados</a></li>
-              <li><a href="#" class="fw-bold text-dark text-decoration-none">Trabaja con nosotros</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-3 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">SERVICIO CLIENTE</h6>
-            <ul class="list-unstyled small">
-              <li><a href="#" class="fw-bold text-dark text-decoration-none">Preguntas frecuentes</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Garantía MasterBikes</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Armados de bicicletas</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Registra tu bicicleta</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Términos y condiciones</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Políticas de devolución</a></li>
-              <li><a href="#" class="text-dark text-decoration-none">Métodos de envío</a></li>
-              <li><a href="#" class="fw-bold text-dark text-decoration-none">Seguimiento de pedidos</a></li>
-            </ul>
-          </div>
-          <div class="col-12 col-md-3 mb-4 mb-md-0">
-            <h6 class="fw-bold mb-3">MÉTODOS DE PAGO</h6>
-            <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-md-start">
-              <img src="../images/icon-webpay.png" alt="Webpay" height="28">
-              <a href="https://www.visa.cl/soporte/consumidores/viajes.html?gad_source=1&gad_campaignid=22511339436&gbraid=0AAAAABKhpWFMuBKZKUYc8vP14kTHlbMMV&gclid=CjwKCAjw3MXBBhAzEiwA0vLXQQmHYinaaYDiJYLtpVYt0QRFNY907zvN1Hza1bCsQcu11XLVOpdSthoCOmcQAvD_BwE" target="_blank">
-                <img src="../images/icon-visa.png" alt="Visa" height="28">
-              </a>
-              <img src="../images/icon-master.png" alt="Mastercard" height="28">
-              <img src="../images/icon-magna.png" alt="Magna" height="28">
-              <img src="../images/icon-cabal.png" alt="Cabal" height="28">
-            </div>
-          </div>
-          <div class="col-12 col-md-3">
-            <h6 class="fw-bold mb-3">SÍGUENOS EN NUESTRAS REDES</h6>
-            <div class="mb-2 d-flex align-items-center">
-              <a href="#" class="me-2"><img src="../images/facebook.png" alt="Facebook" height="28"></a>
-              <a href="#" class="me-2"><img src="../images/instagram.png" alt="Instagram" height="28"></a>
-              <a href="#" class="me-2"><img src="../images/youtube.png" alt="YouTube" height="28"></a>
-            </div>
-            <div class="mb-2">
-              <img src="../images/Gemini_Generated_Image_jydrg5jydrg5jydr.png" alt="MasterBikes" height="28" class="me-2">
-              <img src="../images/shimano-logo.avif" alt="Shimano" height="28">
-            </div>
-            <a href="formulario.html" class="btn btn-dark btn-sm w-100 mt-2" style="border-radius:0;">
-              <i class="bi bi-envelope-fill me-2"></i>Formulario de contacto
-            </a>
-          </div>
-        </div>
-        <div class="text-center mt-4 small text-muted">
-          &copy; 2024 MasterBikes. Todos los derechos reservados.
-        </div>
-      </div>
+    <footer>
+        <object
+                id="footerObj"
+                type="text/html"
+                data="/components/footer.html"
+                style="width:100%; border:none; overflow:hidden;"
+                onload="
+      this.style.height =
+        this.contentDocument.documentElement.scrollHeight + 'px';
+    ">
+        </object>
     </footer>
+
     <!-- Fin Footer -->
 </body>
 </html>

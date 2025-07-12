@@ -459,3 +459,210 @@ body {
         font-size: 2.5rem;
     }
 }
+
+/* Estilo “bloqueado” para nav-links */
+.nav-link.locked {
+    color: #6c757d !important;    /* gris apagado */
+    opacity: 0.7;                 /* ligeramente transparente */
+    pointer-events: none;         /* desactiva el click */
+    cursor: default;              /* cursor normal */
+    position: relative;
+}
+/* Icono de candado al final (FontAwesome debe estar cargado) */
+.nav-link.locked::after {
+    content: "\f023";             /* unicode del candado */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: .3rem;
+    font-size: .9em;
+    vertical-align: text-bottom;
+}
+
+/* === Estilo “bloqueado” para los service-card === */
+ .service-card.locked {
+     filter: grayscale(80%) opacity(0.7);
+     pointer-events: none;            /* desactiva hover/click */
+     position: relative;              /* para posicionar el candado */
+     transition: all 0.3s ease;
+ }
+.service-card.locked .service-icon,
+.service-card.locked .card-title,
+.service-card.locked .card-text {
+    color: #6c757d;                  /* tono apagado */
+}
+.service-card.locked .btn {
+    border-color: #6c757d;
+    color: #6c757d;
+    cursor: default;
+}
+
+/* Candado en la esquina */
+.service-card.locked::after {
+    content: "\f023";                /* unicode de lock en FA */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.2rem;
+    color: #6c757d;
+}
+
+/* Estilo “bloqueado” para enlaces de footer */
+.disabled-link {
+    color: #6c757d !important;     /* gris apagado */
+    opacity: 0.7;                   /* ligeramente translúcido */
+    pointer-events: none;           /* desactiva el click */
+    cursor: default;                /* cursor normal */
+    position: relative;
+}
+
+/* Icono de candado al lado, usando Font Awesome */
+.disabled-link::after {
+    content: "\f023";               /* Unicode del lock */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 0.3rem;
+    font-size: 0.9em;
+    vertical-align: text-bottom;
+}
+
+/* estilo “bloqueado” */
+.nav-link.locked {
+    color: #6c757d !important;     /* gris apagado */
+    opacity: 0.7;                   /* un poco transparente */
+    pointer-events: none;           /* desactiva el click */
+    cursor: default;                /* cursor normal */
+}
+
+/* opcional: añadir candado con Font-Awesome */
+.nav-link.locked .fa-lock {
+    font-size: 0.8em;
+    vertical-align: text-bottom;
+}
+
+/* ---------- IMÁGENES DE BICICLETA: relación de aspecto fija ---------- */
+.bike-card .card-img-top {
+    width: 100% !important;
+    aspect-ratio: 16 / 9 !important;
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+/* — Compactar tarjeta — */
+.bike-card .card-body {
+    padding: 12px !important;       /* Menos padding interno */
+}
+
+/* Reducir márgenes entre párrafos */
+.bike-card .card-body h5,
+.bike-card .card-body p,
+.bike-card .card-body ul {
+    margin-bottom: 0.5rem !important;
+}
+
+/* Estilo para la lista de sucursales */
+.bike-card .card-body ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* Ítems de sucursal con misma fuente y color negro */
+.bike-card .card-body ul li {
+    font-size: 0.9rem;
+    color: #000 !important;
+    margin-bottom: 0.25rem;
+}
+
+/* Compactar botones y enlaces al pie */
+.bike-card .card-body .btn,
+.bike-card .card-body a.btn {
+    margin-top: 0.5rem !important;
+    padding: 0.4rem 0.75rem !important;
+    font-size: 0.9rem;
+}
+
+/* ————————————————
+   Forzar texto negro en tarjetas
+   ———————————————— */
+.bike-card .card-body,
+.bike-card .card-body h5,
+.bike-card .card-body p,
+.bike-card .card-body ul li,
+.bike-card .card-body strong {
+    color: #000 !important;
+}
+
+.bike-card .card-img-top {
+    width: 100% !important;
+    height: auto !important;           /* elimina alturas fijas */
+    aspect-ratio: 16 / 9 !important;   /* fuerza 16:9 */
+    object-fit: cover !important;
+    object-position: center !important;
+}
+
+.bike-card .card-body > *:not(:last-child) {
+    margin-bottom: 0.25rem !important;
+    line-height: 1.2 !important;
+}
+
+/* ————————————————
+   Limitar altura y compactar tarjetas
+   ———————————————— */
+.bike-card {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;     /* Ajusta este valor a tu gusto */
+}
+
+.bike-card .card-body {
+    flex: 1 1 auto;
+    padding: 12px !important;
+    overflow: hidden;       /* Recorta el contenido que sobrepase */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Descripción a 3 líneas como máximo */
+.bike-card .card-body p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;  /* verás como la descripción ya no crece excesivamente */
+    overflow: hidden;
+}
+
+/* Lista de sucursales con scroll si excede los 4rem */
+.bike-card .card-body ul {
+    max-height: 4rem;
+    overflow-y: auto;
+    margin-bottom: 0.5rem;
+}
+
+/* Botones siempre abajo */
+.bike-card .card-body > .mt-auto {
+    margin-top: auto !important;
+}
+
+/* Botones deshabilitados (estilo coherente con .locked en enlaces) */
+.btn-locked {
+    opacity: 0.5;
+    pointer-events: none;    /* evita clicks */
+    cursor: not-allowed;
+}
+
+/* Botones “locked” atenuados e inactivos */
+.add-to-cart-btn.locked,
+.btn-details.locked {
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+
+/* Agrega un candado antes del texto */
+.add-to-cart-btn.locked::before,
+.btn-details.locked::before {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    content: "\f023";  /* fa-lock */
+    margin-right: 0.5rem;
+}

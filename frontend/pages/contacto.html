@@ -100,51 +100,15 @@
     </style>
 </head>
 <body>
-    <!-- Barra superior de contacto -->
-    <div class="top-bar">
-        ¿Dudas? Llámanos al <b>+56232149673</b> | L-V: 8:30 a 18:15 - V: 8:30 a 16:00 | <a href="formulario.html" class="contact-link">Formulario de contacto</a>
-    </div>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="../index.html">
-                <img src="../img/logo.png" alt="MasterBikes Logo" height="30" class="d-inline-block align-top me-2">
-                MasterBikes
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="../index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="arriendo.html">Arriendo</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="personalizacion.html">Personalización</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-                <div class="d-flex">
-                    <button class="btn btn-outline-light me-2" type="button" data-bs-toggle="modal" data-bs-target="#loginModal">
-                        Iniciar Sesión
-                    </button>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#registroModal">
-                        Registrarse
-                    </button>
-                    <button class="btn btn-outline-light ms-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
-                        <i class="bi bi-cart"></i>
-                        <span class="badge bg-danger cart-counter">0</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </nav>
+    <header>
+        <object
+                type="text/html"
+                data="../components/topbar.html"
+                style="width:100%; height:100px; border:none; overflow:hidden;">
+        </object>
+    </header>
 
     <!-- Hero Section -->
     <div class="bg-primary text-white py-5">
@@ -476,6 +440,19 @@
             </div>
         </div>
     </div>
+
+    <footer>
+        <object
+                id="footerObj"
+                type="text/html"
+                data="/components/footer.html"
+                style="width:100%; border:none; overflow:hidden;"
+                onload="
+      this.style.height =
+        this.contentDocument.documentElement.scrollHeight + 'px';
+    ">
+        </object>
+    </footer>
 
     <script>
         // Script para manejar las pestañas de ubicación
